@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <!-- <title><img src="img/logo.png" style="width: 9rem;" alt="" - Digital Agency Website Template></title> -->
+    <title>caie-sa</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
@@ -13,8 +13,11 @@
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Rubik&display=swap" rel="stylesheet"> 
-
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Rubik&display=swap"
+        rel="stylesheet"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
 
@@ -22,34 +25,37 @@
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+
+    <link rel="stylesheet" href="css/animate.css">
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
-     <!-- Navbar Start -->
-     <div class="container-fluid bg-white position-relative">
-        <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0">
-            
+    <!-- Navbar Start -->
+    <div class="container-fluid position-relative" style="background-color: #03001C;">
+        <nav class="navbar navbar-expand-lg navbar-light py-3 py-lg-0">
+
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse" style="text-align: right;">
                 <div class="navbar-nav ml-auto py-0 pr-3 border-right">
-                    
-                    
-                 
-                <a href="contact.html" class="nav-item nav-link">التواصل</a>
-                <a href="about.html" class="nav-item nav-link">من نحن</a>
-                <a href="service.html" class="nav-item nav-link">خدماتنا</a>
-                <a href="project.html" class="nav-item nav-link">مشاريعنا</a>
-                <a href="index.html" class="nav-item nav-link active">الصفحة الرئيسية </a>
-                
 
-            </div>
-            <a href="index.html" class="navbar-brand text-secondary">
-                <h1 class="display-4 text-uppercase"><img src="img/logo.png" style="width: 9rem;" alt=""></h1>
-            </a>
+
+
+                    <a href="contact.html" class="nav-item nav-link active">التواصل</a>
+                    <a href="about.html" class="nav-item nav-link">من نحن</a>
+                    <a href="service.html" class="nav-item nav-link">خدماتنا</a>
+                    <a href="project.html" class="nav-item nav-link">مشاريعنا</a>
+                    <a href="index.html" class="nav-item nav-link ">الصفحة الرئيسية </a>
+
+
+                </div>
+                <a href="index.html" class="navbar-brand text-secondary">
+                    <h1 class="display-4 text-uppercase"><img src="img/logo.png" style="width: 9rem;" alt=""></h1>
+                </a>
         </nav>
     </div>
     <!-- Navbar End -->
@@ -70,8 +76,7 @@
                 <div class="position-relative h-100">
                     <iframe class="position-relative w-100 h-100"
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001156.4288297426!2d-78.01371936852176!3d42.72876761954724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd"
-                        frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
-                        tabindex="0"></iframe>
+                        frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                 </div>
             </div>
         </div>
@@ -83,27 +88,36 @@
                         <div class="form-row">
                             <div class="col-md-6">
                                 <div class="control-group">
-                                    <input type="text" class="form-control bg-light border-0 p-4" id="name" placeholder="الاسم" required="required" data-validation-required-message="الرجاء ادخال الاسم" />
+                                    <input type="text" class="form-control bg-light border-0 p-4" id="name"
+                                        placeholder="الاسم" required="required"
+                                        data-validation-required-message="الرجاء ادخال الاسم" />
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="control-group">
-                                    <input type="email" class="form-control bg-light border-0 p-4" id="email" placeholder="الايميل" required="required" data-validation-required-message="الرجاء ادخال الاسم" />
+                                    <input type="email" class="form-control bg-light border-0 p-4" id="email"
+                                        placeholder="الايميل" required="required"
+                                        data-validation-required-message="الرجاء ادخال الاسم" />
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
                         </div>
                         <div class="control-group">
-                            <input type="text" class="form-control bg-light border-0 p-4" id="subject" placeholder="الموضوع" required="required" data-validation-required-message="الرجاء ادخال الموضوع" />
+                            <input type="text" class="form-control bg-light border-0 p-4" id="subject"
+                                placeholder="الموضوع" required="required"
+                                data-validation-required-message="الرجاء ادخال الموضوع" />
                             <p class="help-block text-danger"></p>
                         </div>
                         <div class="control-group">
-                            <textarea class="form-control bg-light border-0 py-3 px-4" rows="5" id="message" placeholder="الرسالة" required="required" data-validation-required-message="الرجاء ادخال الرسالة"></textarea>
+                            <textarea class="form-control bg-light border-0 py-3 px-4" rows="5" id="message"
+                                placeholder="الرسالة" required="required"
+                                data-validation-required-message="الرجاء ادخال الرسالة"></textarea>
                             <p class="help-block text-danger"></p>
                         </div>
                         <div class="text-center">
-                            <button class="btn btn-primary text-uppercase py-3 px-5" type="submit" id="sendMessageButton">ارسال</button>
+                            <button class="btn btn-primary text-uppercase py-3 px-5" type="submit"
+                                id="sendMessageButton">ارسال</button>
                         </div>
                     </form>
                 </div>
@@ -113,8 +127,8 @@
     <!-- Contact End -->
 
 
-     <!-- Footer Start -->
-     <div class="container-fluid bg-dark text-white-50 py-5 px-sm-3 px-md-5" style="margin-top: 90px;">
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white-50 py-5 px-sm-3 px-md-5" style="margin-top: 90px;">
         <div class="row pt-5">
             <div class="col-lg-3 col-md-6 mb-5">
                 <a href="index.html" class="navbar-brand">
@@ -139,11 +153,13 @@
             <div class="col-lg-3 col-md-6 mb-5">
                 <h4 class="text-uppercase text-white mb-4">الروابط</h4>
                 <div class="d-flex flex-column justify-content-start">
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right text-white mr-2"></i>الصفحةالرئيسية</a>
+                    <a class="text-white-50 mb-2" href="#"><i
+                            class="fa fa-angle-right text-white mr-2"></i>الصفحةالرئيسية</a>
                     <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right text-white mr-2"></i>من نحن</a>
                     <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right text-white mr-2"></i>خدماتنا</a>
                     <!-- <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right text-white mr-2"></i>Pricing Plan</a> -->
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right text-white mr-2"></i>فريق العمل</a>
+                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right text-white mr-2"></i>فريق
+                        العمل</a>
                     <a class="text-white-50" href="#"><i class="fa fa-angle-right text-white mr-2"></i>تواصل معنا</a>
                 </div>
             </div>
@@ -162,7 +178,7 @@
             </div> -->
         </div>
     </div>
-    
+
     <!-- Footer End -->
 
 

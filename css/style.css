@@ -32,7 +32,7 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: "Rubik", sans-serif;
+  --font-family-sans-serif: "Cairo", sans-serif;
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
@@ -64,7 +64,7 @@ section {
 
 body {
   margin: 0;
-  font-family: "Rubik", sans-serif;
+  font-family: "Cairo", sans-serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -387,10 +387,10 @@ h6,
 .h5,
 .h6 {
   margin-bottom: 0.5rem;
-  font-family: "Oswald", sans-serif;
+  font-family: "Cairo", sans-serif;
   font-weight: 500;
   line-height: 1.2;
-  color: #34b14a;
+  color: #FFAA17;
 }
 
 h1,
@@ -2718,7 +2718,7 @@ fieldset:disabled a.btn {
 
 .btn-primary {
   color: #FFF;
-  background-color: #dcb74b;
+  background-color: #03001c;
   border-color: #dcb74b;
 }
 
@@ -4874,6 +4874,7 @@ input[type="button"].btn-block {
 }
 
 .navbar-light .navbar-brand {
+  padding-left: 20px;
   color: rgba(0, 0, 0, 0.9);
 }
 
@@ -6406,7 +6407,7 @@ a.close.disabled {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: "Rubik", sans-serif;
+  font-family: "Cairo", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -7045,7 +7046,7 @@ button.bg-light:focus {
 }
 
 .bg-dark {
-  background-color: #28a745 !important;
+  background-color: #03001C !important;
 }
 
 a.bg-dark:hover,
@@ -7056,8 +7057,7 @@ button.bg-dark:focus {
 }
 
 .bg-white {
-  background: rgb(2, 0, 36);
-  background: linear-gradient(90deg, rgba(2, 0, 36, 1) 2%, rgba(3, 201, 136, 1) 44%, rgba(206, 237, 199, 1) 100%);
+  background-color: #fff;
 }
 
 .bg-transparent {
@@ -10958,7 +10958,7 @@ h6,
 }
 
 .navbar-light .navbar-nav .nav-link {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Cairo', sans-serif;
   font-weight: 400;
   text-transform: uppercase;
   padding: 45px 15px;
@@ -10988,8 +10988,9 @@ h6,
 }
 
 .service-item:hover {
-  background: #34ce57;
+  background: #03001C;
   color: #FFF;
+  border: 2px solid #FFAA17;
 }
 
 .service-item h4 {
@@ -11151,7 +11152,6 @@ h6,
 }
 
 .bg-dark {
-  background-color: #34b14a !important;
   color: #fff !important;
 }
 
@@ -11171,9 +11171,11 @@ h6,
   background-position: top;
   background-attachment: fixed;
   position: relative;
-  background: rgb(206, 237, 199);
-  background: linear-gradient(90deg, rgba(206, 237, 199, 1) 2%, rgba(3, 201, 136, 1) 44%, rgba(2, 0, 36, 1) 100%);
+  /* background: rgb(206, 237, 199);
+  background: linear-gradient(90deg, rgba(206, 237, 199, 1) 2%, rgba(3, 201, 136, 1) 44%, rgba(2, 0, 36, 1) 100%); */
 }
+
+.site-blocks-cover .h-2 {}
 
 .site-blocks-cover.overlay {
   position: relative;
