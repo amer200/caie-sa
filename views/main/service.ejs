@@ -1,0 +1,31 @@
+<%- include('includes/head') %>
+
+
+    <!-- Services Start -->
+    <div class="container-fluid py-5">
+        <div class="container pt-5 pb-3">
+            <h1 class="display-4 text-uppercase text-center mb-5">خدمات الجمعية</h1>
+            <div class="row">
+                <% servs.forEach(s=>{ %>
+                    <div class="col-lg-3 mb-2">
+                        <div class="service-item rounded p-5 mb-4">
+                            <img src="<%=s.img%>" alt="" style="width: 4rem;">
+                            <!-- <i class="fa fa-3x fa-laptop-code text-primary mb-4"></i> -->
+                            <h4 class="text-uppercase mb-4">
+                                <%=s.title.ar.split(' ')[0]%> <span class="d-block text-body">
+                                    <% let i = 1%>
+                                    <%s.title.ar.split(' ').forEach(c=>{%>
+                                        <%=s.title.ar.split(' ')[i]%>
+                                        <%i++%>
+                                    <%})%>
+                                </span></h4>
+                            <p class="m-0">التدريب والتأهيل والتمية في مجال الجودة والتميز المؤسسي</p>
+                        </div>
+                    </div>
+                    <%})%>
+            </div>
+        </div>
+        <!-- Services End -->
+
+
+        <%-include('includes/footer')%>

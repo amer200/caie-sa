@@ -10,11 +10,8 @@ exports.getMain = async (req, res) => {
             result.push(array.slice(index, index + 2));
         return result;
     }, []);
-    let lang = 'en';
-    if (req.session.lang) {
-        lang = req.session.lang;
-    }
-    res.render(`main-${lang}/index`, {
+
+    res.render(`main/index`, {
         about: about,
         projectsP: parts,
         projects: projects,
@@ -23,54 +20,39 @@ exports.getMain = async (req, res) => {
 }
 exports.getProjects = async (req, res) => {
     const projects = await Project.find();
-    let lang = 'en';
-    if (req.session.lang) {
-        lang = req.session.lang;
-    }
+
     const parts = projects.reduce(function (result, value, index, array) {
         if (index % 2 === 0)
             result.push(array.slice(index, index + 2));
         return result;
     }, []);
-    res.render(`main-${lang}/project`, {
+    res.render(`main/project`, {
         projects: parts
     })
 }
 exports.getProjectById = async (req, res) => {
     const id = req.params.id;
     const project = await Project.findById(id);
-    let lang = 'en';
-    if (req.session.lang) {
-        lang = req.session.lang;
-    }
-    res.render(`main-${lang}/single_project`, {
+
+    res.render(`main/single_project`, {
         p: project
     })
 }
 exports.getAbout = async (req, res) => {
     const about = await About.findOne();
-    let lang = 'en';
-    if (req.session.lang) {
-        lang = req.session.lang;
-    }
-    res.render(`main-${lang}/about`, {
+
+    res.render(`main/about`, {
         about: about
     })
 }
 exports.getServices = async (req, res) => {
     const servs = await Serv.find();
-    let lang = 'en';
-    if (req.session.lang) {
-        lang = req.session.lang;
-    }
-    res.render(`main-${lang}/service`, {
+
+    res.render(`main/service`, {
         servs: servs
     })
 }
 exports.getContact = async (req, res) => {
-    let lang = 'en';
-    if (req.session.lang) {
-        lang = req.session.lang;
-    }
-    res.render(`main-${lang}/contact`)
+
+    res.render(`main/contact`)
 }

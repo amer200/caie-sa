@@ -18,12 +18,10 @@ exports.getMain = async (req, res) => {
 /* about */
 exports.about = (req, res) => {
     const ar = req.body.ar;
-    const en = req.body.en;
     About.findOne()
         .then(a => {
             if (a) {
                 a.ar = ar;
-                a.en = en;
                 if (req.file) {
                     fs.unlink(`public${a.img}`, err => {
                         if (err) {
@@ -36,7 +34,6 @@ exports.about = (req, res) => {
             } else {
                 const a = new About({
                     ar: ar,
-                    en: en,
                     img: req.file.path.split('public')[1]
                 })
                 return a.save()
@@ -162,11 +159,9 @@ exports.addServ = (req, res) => {
     const img = req.file.path.split('public')[1];
     const title = {
         ar: req.body.titlear,
-        en: req.body.titleen
     };
     const content = {
         ar: req.body.ar,
-        en: req.body.en
     }
     const serv = new Serv({
         img: img,
