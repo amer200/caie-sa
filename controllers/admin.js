@@ -2,17 +2,20 @@ const About = require('../models/about');
 const Project = require('../models/project');
 const projectcateg = require('../models/projectcateg');
 const Serv = require('../models/serv');
+const Slide = require('../models/slider');
 const fs = require('fs');
 exports.getMain = async (req, res) => {
     const about = await About.findOne();
     const projects = await Project.find();
     const categ = await projectcateg.find();
     const servs = await Serv.find();
+    const slide = await Slide.find();
     res.render('admin/index', {
         about: about,
         projects: projects,
         categs: categ,
-        servs: servs
+        servs: servs,
+        slide: slide
     })
 }
 /* about */
@@ -188,4 +191,8 @@ exports.removeServ = (req, res) => {
         .catch(err => {
             console.log(err)
         })
+}
+/**slide */
+exports.addSlider = (req, res) => {
+
 }

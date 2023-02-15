@@ -2,30 +2,18 @@
     <div class="row">
         <div class="col-12" style="margin-bottom: 10px;">
             <form action="/admin/add-slide" method="post" enctype="multipart/form-data">
-                <h4>add new carousel</h4>
+                <h4>اضافة صورة جديدة</h4>
                 <div class="mb-3">
-                    <label for="titleOne" class="form-label">first title</label>
-                    <input type="text" name="title1en" class="form-control" placeholder="titel 1">
-                    <label for="titleOne" class="form-label">العنوان الاول</label>
-                    <input type="text" name="title1ar" class="form-control" placeholder="العنوان 1">
+                    <input type="file" name="img" class="form-control" multiple>
                 </div>
-                <div class="mb-3">
-                    <label for="titletwow" class="form-label">second title</label>
-                    <input type="text" name="title2en" class="form-control" placeholder="titel 2">
-                    <label for="titletwow" class="form-label">العنوان الثاني</label>
-                    <input type="text" name="title2ar" class="form-control" placeholder="العنوان 2">
-                </div>
-                <div class="mb-3">
-                    <input type="file" name="img" class="form-control">
-                </div>
-                <button type="submit" class="btn btn-dark">submit</button>
+                <button type="submit" class="btn btn-dark">حفظ</button>
             </form>
         </div>
         <hr>
         <div class="col-12" style="margin-top: 10px;">
             <h4>edit slides</h4>
             <ul class="list-group">
-                <% slides.forEach(s=>{%>
+                <% slide.forEach(s=>{%>
                     <li class="list-group-item"><img src="<%=s.img%>" alt="img" style="width: 80px;
                         height: 50px;"> <button type="button" class="btn btn-danger"
                             onclick="removeSlide('<%=s._id%>')" style="float: right;">remove</button></li>

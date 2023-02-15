@@ -4,7 +4,7 @@ const adminController = require('../controllers/admin');
 const isAuth = require('../auth/isAdmin');
 route.get('/', isAuth.isAdmin, adminController.getMain);
 /********************* slider */
-// route.post('/add-slide', isAuth.isAdmin, adminController.addSlider);
+route.post('/add-slide', isAuth.isAdmin, adminController.addSlider);
 // route.get('/remove-slide/:sId', isAuth.isAdmin, adminController.removeSlide);
 /************************** about *********************************** */
 route.post('/about', isAuth.isAdmin, adminController.about);

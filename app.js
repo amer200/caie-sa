@@ -34,7 +34,7 @@ const storage = multer.diskStorage({
     }
 });
 const upload = multer({ storage: storage });
-app.post('/admin/add-slide', upload.single('img'));
+app.post('/admin/add-slide', upload.array('img'));
 app.post('/admin/about', upload.single('img'));
 app.post('/admin/add-serv', upload.single('img'));
 app.post('/admin/add-project', upload.array('img'));
