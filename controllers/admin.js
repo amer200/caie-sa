@@ -1,21 +1,21 @@
 const About = require('../models/about');
 const Project = require('../models/project');
-const projectcateg = require('../models/projectcateg');
 const Serv = require('../models/serv');
 const Slide = require('../models/slider');
+const Team = require('../models/team');
 const fs = require('fs');
 exports.getMain = async (req, res) => {
     const about = await About.findOne();
     const projects = await Project.find();
-    const categ = await projectcateg.find();
     const servs = await Serv.find();
     const slide = await Slide.find();
+    const team = await Team.find();
     res.render('admin/index', {
         about: about,
         projects: projects,
-        categs: categ,
         servs: servs,
-        slide: slide
+        slide: slide,
+        team: team
     })
 }
 /* about */
@@ -93,7 +93,6 @@ exports.addProject = (req, res) => {
         ar: req.body.descar,
         en: req.body.descen
     };
-    const categ = req.body.categ;
     let imgs = []
     req.files.forEach(i => {
         imgs.push(i.path.split('public')[1])
@@ -101,7 +100,6 @@ exports.addProject = (req, res) => {
     const project = new Project({
         name: name,
         desc: desc,
-        categ: categ,
         details: details,
         imgs: imgs
     })
@@ -194,5 +192,75 @@ exports.removeServ = (req, res) => {
 }
 /**slide */
 exports.addSlider = (req, res) => {
+    let imgs = [];
+    req.files.forEach(i => {
+        let newImg = {
+            img: i.path.split('public')[1]
+        }
+        imgs.push(newImg);
+    })
+    Slide.insertMany(imgs)
+        .then(s => {
+            console.log(s)
+            res.redirect('/admin');
+        })
+        .catch(err => {
+            console.log(err)
+        })
+}
+exports.removeSlide = (req, res) => {
+    const sId = req.params.sId;
+    Slide.findByIdAndRemove(sId)
+        .then(s => {
+            fs.unlink(`public${s.img}`, (err) => {
+                if (err) {
+                    console.log(err)
+                }
+            })
+            res.send({
+                msg: 'ok'
+            })
+        })
+        .catch(err => {
+            console.log(err)
+        })
+}
+/* team */
+exports.addTeamMember = (req, res) => {
+    const name = req.body.name;
+    const job = req.body.job;
+    const img = req.file.path.split('public')[1];
+    const facebook = req.body.facebook;
+    const linkedin = req.body.linkedin;
+    const twitter = req.body.twitter;
 
+    const newMember = new Team({
+        name: name,
+        job: job,
+        img: img,
+        facebook: facebook,
+        linkedin: linkedin,
+        twitter: twitter
+    })
+    newMember.save()
+        .then(m => {
+            res.redirect('/admin');
+        })
+}
+exports.removeTeamMember = (req, res) => {
+    const sId = req.params.id;
+    Team.findByIdAndRemove(sId)
+        .then(s => {
+            fs.unlink(`public${s.img}`, (err) => {
+                if (err) {
+                    console.log(err)
+                }
+            })
+            res.send({
+                msg: 'ok'
+            })
+        })
+        .catch(err => {
+            console.log(err)
+        })
 }

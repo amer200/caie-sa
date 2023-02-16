@@ -9,7 +9,6 @@ const projectSchema = mongoose.Schema({
         ar: String,
         en: String
     },
-    categ: { type: mongoose.Schema.Types.ObjectId, ref: 'projectcateg' },
     imgs: [String],
     details: [
         {

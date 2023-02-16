@@ -1,0 +1,62 @@
+<div class="col-6 d-none all-forms" id="team">
+    <div class="row">
+        <div class="col-12" style="margin-bottom: 10px;">
+            <form action="/admin/add-team" method="post" enctype="multipart/form-data">
+                <h4>اضافة عضو جديد لفريق العمل</h4>
+                <div class="mb-3">
+                    <label for="name" class="form-label">الاسم</label>
+                    <input type="text" name="name" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="name" class="form-label">الوظيفة</label>
+                    <input type="text" name="job" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="name" class="form-label">facebook <i class="fa-brands fa-facebook"></i></label>
+                    <input type="text" name="facebook" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="name" class="form-label">twitter <i class="fa-brands fa-twitter"></i></label>
+                    <input type="text" name="twitter" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="name" class="form-label">linkedin <i class="fa-brands fa-linkedin"></i></label>
+                    <input type="text" name="linkedin" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <input type="file" name="img" class="form-control">
+                </div>
+                <button type="submit" class="btn btn-dark">submit</button>
+            </form>
+        </div>
+        <hr>
+        <div class="col-12" style="margin-top: 10px;">
+            <h4>تعديل </h4>
+            <ul class="list-group">
+                <% team.forEach(s=>{%>
+                    <li class="list-group-item"><span>
+                            <%= s.name%>
+                        </span>
+                        <img src="<%=s.img%>" alt="img" style="width: 80px;
+                        height: 50px;">
+                        <button type="button" class="btn btn-danger" onclick="removeteam('<%=s._id%>')"
+                            style="float: right;">remove</button>
+                    </li>
+                    <%})%>
+            </ul>
+        </div>
+    </div>
+</div>
+<script>
+    const removeteam = (id) => {
+        if (confirm('warn! you will dellete this faq?')) {
+            fetch(`/admin/remove-team/${id}`)
+                .then(res => {
+                    return location.reload()
+                })
+                .catch(err => {
+                    alert(err)
+                })
+        }
+    }
+</script>

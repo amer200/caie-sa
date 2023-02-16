@@ -38,6 +38,7 @@ app.post('/admin/add-slide', upload.array('img'));
 app.post('/admin/about', upload.single('img'));
 app.post('/admin/add-serv', upload.single('img'));
 app.post('/admin/add-project', upload.array('img'));
+app.post('/admin/add-team', upload.single('img'));
 /********************************************************************************* */
 const adminRoutes = require('./routes/admin');
 const mainRoutes = require('./routes/main');

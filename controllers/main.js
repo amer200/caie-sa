@@ -1,21 +1,20 @@
 const About = require('../models/about');
 const Project = require('../models/project');
 const Serv = require('../models/serv');
+const Team = require('../models/team');
+const Slide = require('../models/slider');
 exports.getMain = async (req, res) => {
     const about = await About.findOne();
-    const projects = await Project.find().populate('categ');
+    const projects = await Project.find();
     const servs = await Serv.find();
-    const parts = projects.reduce(function (result, value, index, array) {
-        if (index % 2 === 0)
-            result.push(array.slice(index, index + 2));
-        return result;
-    }, []);
-
+    const team = await Team.find();
+    const slides = await Slide.find();
     res.render(`main/index`, {
         about: about,
-        projectsP: parts,
         projects: projects,
-        servs: servs
+        servs: servs,
+        team: team,
+        slide: slides
     })
 }
 exports.getProjects = async (req, res) => {
