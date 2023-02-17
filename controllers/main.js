@@ -9,6 +9,7 @@ exports.getMain = async (req, res) => {
     const servs = await Serv.find();
     const team = await Team.find();
     const slides = await Slide.find();
+    console.log(team)
     res.render(`main/index`, {
         about: about,
         projects: projects,
@@ -19,21 +20,15 @@ exports.getMain = async (req, res) => {
 }
 exports.getProjects = async (req, res) => {
     const projects = await Project.find();
-
-    const parts = projects.reduce(function (result, value, index, array) {
-        if (index % 2 === 0)
-            result.push(array.slice(index, index + 2));
-        return result;
-    }, []);
     res.render(`main/project`, {
-        projects: parts
+        projects: projects
     })
 }
 exports.getProjectById = async (req, res) => {
     const id = req.params.id;
     const project = await Project.findById(id);
 
-    res.render(`main/single_project`, {
+    res.render(`main/singel-item`, {
         p: project
     })
 }

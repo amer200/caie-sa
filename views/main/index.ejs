@@ -95,162 +95,33 @@
         </div>
         <!-- Portfolio End -->
 
-
-        <!-- Pricing Plan Start -->
-        <!-- <div class="container-fluid py-5">
-        <div class="container pt-5 pb-3">
-            <h1 class="display-4 text-uppercase text-center mb-5">Competitive Pricing</h1>
-            <div class="row">
-                <div class="col-lg-4 mb-2">
-                    <div class="bg-light rounded text-center pt-5 mt-lg-5 mb-4">
-                        <h2 class="text-uppercase">Basic</h2>
-                        <h6 class="text-uppercase text-body mb-5">The Best Choice</h6>
-                        <div class="text-center bg-dark rounded-circle p-4 mb-2">
-                            <h1 class="display-4 text-white mb-0">
-                                <small class="align-top"
-                                    style="font-size: 22px; line-height: 45px;">$</small>49<small
-                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/
-                                    Mo</small>
-                            </h1>
-                        </div>
-                        <div class="text-center py-4">
-                            <p>HTML5 & CSS3</p>
-                            <p>Bootstrap v4</p>
-                            <p>Responsive Layout</p>
-                            <p>Compatible With All Browsers</p>
-                            <a href="" class="btn btn-dark text-uppercase py-2 px-4 my-3">Order Now</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-2">
-                    <div class="bg-dark rounded text-center pt-5 mb-4">
-                        <h2 class="text-uppercase text-white">Standard</h2>
-                        <h6 class="text-uppercase text-secondary mb-5">The Best Choice</h6>
-                        <div class="text-center bg-primary rounded-circle p-4 mb-2">
-                            <h1 class="display-4 mb-0">
-                                <small class="align-top"
-                                    style="font-size: 22px; line-height: 45px;">$</small>99<small
-                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/
-                                    Mo</small>
-                            </h1>
-                        </div>
-                        <div class="text-center text-secondary py-4">
-                            <p>HTML5 & CSS3</p>
-                            <p>Bootstrap v4</p>
-                            <p>Responsive Layout</p>
-                            <p>Compatible With All Browsers</p>
-                            <a href="" class="btn btn-primary text-uppercase py-2 px-4 my-3">Order Now</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-2">
-                    <div class="bg-light rounded text-center pt-5 mt-lg-5 mb-4">
-                        <h2 class=" text-uppercase">Extended</h2>
-                        <h6 class="text-uppercase text-body mb-5">The Best Choice</h6>
-                        <div class="text-center bg-dark rounded-circle p-4 mb-2">
-                            <h1 class="display-4 text-white mb-0">
-                                <small class="align-top"
-                                    style="font-size: 22px; line-height: 45px;">$</small>149<small
-                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/
-                                    Mo</small>
-                            </h1>
-                        </div>
-                        <div class="text-center py-4">
-                            <p>HTML5 & CSS3</p>
-                            <p>Bootstrap v4</p>
-                            <p>Responsive Layout</p>
-                            <p>Compatible With All Browsers</p>
-                            <a href="" class="btn btn-dark text-uppercase py-2 px-4 my-3">Order Now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-        <!-- Pricing Plan End -->
-
-
         <!-- Team Start -->
         <div class="container-fluid py-5">
             <div class="container py-5">
                 <h1 class="display-4 text-uppercase text-center mb-5">تواصل مع الفريق</h1>
                 <div class="owl-carousel team-carousel position-relative" style="padding-left: 30px;">
-                    <div class="team-item rounded overflow-hidden">
-                        <div class="position-relative">
-                            <img class="img-fluid w-100" src="https://via.placeholder.com/300x400" alt="">
-                            <div class="team-overlay">
-                                <div class="d-flex align-items-center justify-content-start">
-                                    <a class="btn btn-lg btn-primary btn-lg-square mx-1" href="#"><i
-                                            class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-lg btn-primary btn-lg-square mx-1" href="#"><i
-                                            class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-lg btn-primary btn-lg-square mx-1" href="#"><i
-                                            class="fab fa-linkedin-in"></i></a>
+                    <% team.forEach(t=>{%>
+                        <div class="team-item rounded overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid w-100" src="<%=t.img%>" alt="">
+                                <div class="team-overlay">
+                                    <div class="d-flex align-items-center justify-content-start">
+                                        <a class="btn btn-lg btn-primary btn-lg-square mx-1" href="https://<%=t.twitter%>"><i
+                                                class="fab fa-twitter"></i></a>
+                                        <a class="btn btn-lg btn-primary btn-lg-square mx-1" href="https://<%=t.facebook%>"><i
+                                                class="fab fa-facebook-f"></i></a>
+                                        <a class="btn btn-lg btn-primary btn-lg-square mx-1" href="https://<%=t.linkedin%>"><i
+                                                class="fab fa-linkedin-in"></i></a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="bg-light text-center p-4">
-                            <h4 class="text-uppercase">احمد العتيبي</h4>
-                            <p class="m-0">المؤسس</p>
-                        </div>
-                    </div>
-                    <div class="team-item rounded overflow-hidden">
-                        <div class="position-relative">
-                            <img class="img-fluid w-100" src="https://via.placeholder.com/300x400" alt="">
-                            <div class="team-overlay">
-                                <div class="d-flex align-items-center justify-content-start">
-                                    <a class="btn btn-lg btn-primary btn-lg-square mx-1" href="#"><i
-                                            class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-lg btn-primary btn-lg-square mx-1" href="#"><i
-                                            class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-lg btn-primary btn-lg-square mx-1" href="#"><i
-                                            class="fab fa-linkedin-in"></i></a>
-                                </div>
+                            <div class="bg-light text-center p-4">
+                                <h4 class="text-uppercase"><%=t.name%></h4>
+                                <p class="m-0"><%=t.job%></p>
                             </div>
                         </div>
-                        <div class="bg-light text-center p-4">
-                            <h4 class="text-uppercase">اميرة الحاج </h4>
-                            <p class="m-0">مصممة</p>
-                        </div>
-                    </div>
-                    <div class="team-item rounded overflow-hidden">
-                        <div class="position-relative">
-                            <img class="img-fluid w-100" src="https://via.placeholder.com/300x400" alt="">
-                            <div class="team-overlay">
-                                <div class="d-flex align-items-center justify-content-start">
-                                    <a class="btn btn-lg btn-primary btn-lg-square mx-1" href="#"><i
-                                            class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-lg btn-primary btn-lg-square mx-1" href="#"><i
-                                            class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-lg btn-primary btn-lg-square mx-1" href="#"><i
-                                            class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bg-light text-center p-4">
-                            <h4 class="text-uppercase">عبد الرؤوف خالد</h4>
-                            <p class="m-0">مطور</p>
-                        </div>
-                    </div>
-                    <div class="team-item rounded overflow-hidden">
-                        <div class="position-relative">
-                            <img class="img-fluid w-100" src="https://via.placeholder.com/300x400" alt="">
-                            <div class="team-overlay">
-                                <div class="d-flex align-items-center justify-content-start">
-                                    <a class="btn btn-lg btn-primary btn-lg-square mx-1" href="#"><i
-                                            class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-lg btn-primary btn-lg-square mx-1" href="#"><i
-                                            class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-lg btn-primary btn-lg-square mx-1" href="#"><i
-                                            class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bg-light text-center p-4">
-                            <h4 class="text-uppercase">عدي السامي</h4>
-                            <p class="m-0">مسوق</p>
-                        </div>
-                    </div>
+                    <%})%>
+                    
                 </div>
             </div>
         </div>
